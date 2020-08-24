@@ -7,3 +7,49 @@
     width: 200px;
     padding: 20px;
 }
+
+.FancyBorder {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.FancyBorder-blue {
+    border-color: blue;
+}
+
+/**
+ * Product table
+ */
+.product-table {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.search-bar {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.search-bar > label:first-child {
+    margin-bottom: 5px;
+}
+
+.table {
+    width: 100%;
+}
+
+.table th, .table td {
+    text-align: left;
+    width: 50%;
+    padding: 2px;
+}
