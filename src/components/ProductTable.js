@@ -85,7 +85,6 @@ export default class ProductTable extends React.Component {
         let row = [];
         for (let category of Object.keys(this.dataByCategories)) {
                 // @todo Delete EntryCategory when nothing in it
-                row.push(<EntryCategory key={category} category={category}/>);
                 const entries = this.dataByCategories[category]
                     .filter(product => product.name.indexOf(this.state.searchVal) !== -1)
                     .map(product => {
@@ -93,7 +92,10 @@ export default class ProductTable extends React.Component {
                             ? product.stocked && <TableEntry key={product.name} product={product}/>
                             : <TableEntry key={product.name} product={product}/>
                     });
-                entries.forEach(entry => row.push(entry));
+                if (entries.length) {
+                    row.push(<EntryCategory key={category} category={category}/>);
+                    entries.forEach(entry => row.push(entry));
+                }
         }
         return row;
     }

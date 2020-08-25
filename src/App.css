@@ -30,6 +30,8 @@
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
+    width: 250px;
+    height: 300px;
 }
 
 .search-bar {
